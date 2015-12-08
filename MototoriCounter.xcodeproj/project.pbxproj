@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE821FAB1C16F29D0064E8DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAA1C16F29D0064E8DC /* AppDelegate.swift */; };
+		AE821FAD1C16F29D0064E8DC /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAC1C16F29D0064E8DC /* MasterViewController.swift */; };
+		AE821FAF1C16F29D0064E8DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAE1C16F29D0064E8DC /* DetailViewController.swift */; };
+		AE821FB21C16F29D0064E8DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE821FB01C16F29D0064E8DC /* Main.storyboard */; };
+		AE821FB41C16F29D0064E8DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE821FB31C16F29D0064E8DC /* Assets.xcassets */; };
+		AE821FB71C16F29D0064E8DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE821FB51C16F29D0064E8DC /* LaunchScreen.storyboard */; };
+		AE821FC21C16F29D0064E8DC /* MototoriCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FC11C16F29D0064E8DC /* MototoriCounterTests.swift */; };
+		AE821FCD1C16F29D0064E8DC /* MototoriCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FCC1C16F29D0064E8DC /* MototoriCounterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE821FBE1C16F29D0064E8DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE821F9F1C16F29D0064E8DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE821FA61C16F29D0064E8DC;
+			remoteInfo = MototoriCounter;
+		};
+		AE821FC91C16F29D0064E8DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE821F9F1C16F29D0064E8DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE821FA61C16F29D0064E8DC;
+			remoteInfo = MototoriCounter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE821FA71C16F29D0064E8DC /* MototoriCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MototoriCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE821FAA1C16F29D0064E8DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE821FAC1C16F29D0064E8DC /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AE821FAE1C16F29D0064E8DC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AE821FB11C16F29D0064E8DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE821FB31C16F29D0064E8DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE821FB61C16F29D0064E8DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE821FB81C16F29D0064E8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE821FBD1C16F29D0064E8DC /* MototoriCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MototoriCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE821FC11C16F29D0064E8DC /* MototoriCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MototoriCounterTests.swift; sourceTree = "<group>"; };
+		AE821FC31C16F29D0064E8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE821FC81C16F29D0064E8DC /* MototoriCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MototoriCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE821FCC1C16F29D0064E8DC /* MototoriCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MototoriCounterUITests.swift; sourceTree = "<group>"; };
+		AE821FCE1C16F29D0064E8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE821FA41C16F29D0064E8DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE821FBA1C16F29D0064E8DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE821FC51C16F29D0064E8DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE821F9E1C16F29D0064E8DC = {
+			isa = PBXGroup;
+			children = (
+				AE821FA91C16F29D0064E8DC /* MototoriCounter */,
+				AE821FC01C16F29D0064E8DC /* MototoriCounterTests */,
+				AE821FCB1C16F29D0064E8DC /* MototoriCounterUITests */,
+				AE821FA81C16F29D0064E8DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE821FA81C16F29D0064E8DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE821FA71C16F29D0064E8DC /* MototoriCounter.app */,
+				AE821FBD1C16F29D0064E8DC /* MototoriCounterTests.xctest */,
+				AE821FC81C16F29D0064E8DC /* MototoriCounterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE821FA91C16F29D0064E8DC /* MototoriCounter */ = {
+			isa = PBXGroup;
+			children = (
+				AE821FAA1C16F29D0064E8DC /* AppDelegate.swift */,
+				AE821FAC1C16F29D0064E8DC /* MasterViewController.swift */,
+				AE821FAE1C16F29D0064E8DC /* DetailViewController.swift */,
+				AE821FB01C16F29D0064E8DC /* Main.storyboard */,
+				AE821FB31C16F29D0064E8DC /* Assets.xcassets */,
+				AE821FB51C16F29D0064E8DC /* LaunchScreen.storyboard */,
+				AE821FB81C16F29D0064E8DC /* Info.plist */,
+			);
+			path = MototoriCounter;
+			sourceTree = "<group>";
+		};
+		AE821FC01C16F29D0064E8DC /* MototoriCounterTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE821FC11C16F29D0064E8DC /* MototoriCounterTests.swift */,
+				AE821FC31C16F29D0064E8DC /* Info.plist */,
+			);
+			path = MototoriCounterTests;
+			sourceTree = "<group>";
+		};
+		AE821FCB1C16F29D0064E8DC /* MototoriCounterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE821FCC1C16F29D0064E8DC /* MototoriCounterUITests.swift */,
+				AE821FCE1C16F29D0064E8DC /* Info.plist */,
+			);
+			path = MototoriCounterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE821FA61C16F29D0064E8DC /* MototoriCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE821FD11C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounter" */;
+			buildPhases = (
+				AE821FA31C16F29D0064E8DC /* Sources */,
+				AE821FA41C16F29D0064E8DC /* Frameworks */,
+				AE821FA51C16F29D0064E8DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MototoriCounter;
+			productName = MototoriCounter;
+			productReference = AE821FA71C16F29D0064E8DC /* MototoriCounter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE821FBC1C16F29D0064E8DC /* MototoriCounterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE821FD41C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounterTests" */;
+			buildPhases = (
+				AE821FB91C16F29D0064E8DC /* Sources */,
+				AE821FBA1C16F29D0064E8DC /* Frameworks */,
+				AE821FBB1C16F29D0064E8DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE821FBF1C16F29D0064E8DC /* PBXTargetDependency */,
+			);
+			name = MototoriCounterTests;
+			productName = MototoriCounterTests;
+			productReference = AE821FBD1C16F29D0064E8DC /* MototoriCounterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE821FC71C16F29D0064E8DC /* MototoriCounterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE821FD71C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounterUITests" */;
+			buildPhases = (
+				AE821FC41C16F29D0064E8DC /* Sources */,
+				AE821FC51C16F29D0064E8DC /* Frameworks */,
+				AE821FC61C16F29D0064E8DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE821FCA1C16F29D0064E8DC /* PBXTargetDependency */,
+			);
+			name = MototoriCounterUITests;
+			productName = MototoriCounterUITests;
+			productReference = AE821FC81C16F29D0064E8DC /* MototoriCounterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE821F9F1C16F29D0064E8DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = ihcomega;
+				TargetAttributes = {
+					AE821FA61C16F29D0064E8DC = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = CDCUBNY3XU;
+					};
+					AE821FBC1C16F29D0064E8DC = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = CDCUBNY3XU;
+						TestTargetID = AE821FA61C16F29D0064E8DC;
+					};
+					AE821FC71C16F29D0064E8DC = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = CDCUBNY3XU;
+						TestTargetID = AE821FA61C16F29D0064E8DC;
+					};
+				};
+			};
+			buildConfigurationList = AE821FA21C16F29D0064E8DC /* Build configuration list for PBXProject "MototoriCounter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE821F9E1C16F29D0064E8DC;
+			productRefGroup = AE821FA81C16F29D0064E8DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE821FA61C16F29D0064E8DC /* MototoriCounter */,
+				AE821FBC1C16F29D0064E8DC /* MototoriCounterTests */,
+				AE821FC71C16F29D0064E8DC /* MototoriCounterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE821FA51C16F29D0064E8DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE821FB71C16F29D0064E8DC /* LaunchScreen.storyboard in Resources */,
+				AE821FB41C16F29D0064E8DC /* Assets.xcassets in Resources */,
+				AE821FB21C16F29D0064E8DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE821FBB1C16F29D0064E8DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE821FC61C16F29D0064E8DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE821FA31C16F29D0064E8DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE821FAF1C16F29D0064E8DC /* DetailViewController.swift in Sources */,
+				AE821FAD1C16F29D0064E8DC /* MasterViewController.swift in Sources */,
+				AE821FAB1C16F29D0064E8DC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE821FB91C16F29D0064E8DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE821FC21C16F29D0064E8DC /* MototoriCounterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE821FC41C16F29D0064E8DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE821FCD1C16F29D0064E8DC /* MototoriCounterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE821FBF1C16F29D0064E8DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE821FA61C16F29D0064E8DC /* MototoriCounter */;
+			targetProxy = AE821FBE1C16F29D0064E8DC /* PBXContainerItemProxy */;
+		};
+		AE821FCA1C16F29D0064E8DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE821FA61C16F29D0064E8DC /* MototoriCounter */;
+			targetProxy = AE821FC91C16F29D0064E8DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE821FB01C16F29D0064E8DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE821FB11C16F29D0064E8DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE821FB51C16F29D0064E8DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE821FB61C16F29D0064E8DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE821FCF1C16F29D0064E8DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE821FD01C16F29D0064E8DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE821FD21C16F29D0064E8DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MototoriCounter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AE821FD31C16F29D0064E8DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MototoriCounter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AE821FD51C16F29D0064E8DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MototoriCounterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MototoriCounter.app/MototoriCounter";
+			};
+			name = Debug;
+		};
+		AE821FD61C16F29D0064E8DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MototoriCounterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MototoriCounter.app/MototoriCounter";
+			};
+			name = Release;
+		};
+		AE821FD81C16F29D0064E8DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MototoriCounterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MototoriCounter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AE821FD91C16F29D0064E8DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MototoriCounterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MototoriCounter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE821FA21C16F29D0064E8DC /* Build configuration list for PBXProject "MototoriCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE821FCF1C16F29D0064E8DC /* Debug */,
+				AE821FD01C16F29D0064E8DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE821FD11C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE821FD21C16F29D0064E8DC /* Debug */,
+				AE821FD31C16F29D0064E8DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AE821FD41C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE821FD51C16F29D0064E8DC /* Debug */,
+				AE821FD61C16F29D0064E8DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AE821FD71C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE821FD81C16F29D0064E8DC /* Debug */,
+				AE821FD91C16F29D0064E8DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE821F9F1C16F29D0064E8DC /* Project object */;
+}
