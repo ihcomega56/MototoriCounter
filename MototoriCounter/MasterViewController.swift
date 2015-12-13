@@ -41,8 +41,8 @@ class MasterViewController: UITableViewController {
         let currentDate = NSDate()
         if (dates.count > 0 && calendar.isDate(currentDate, equalToDate: dates[0] as! NSDate, toUnitGranularity: .Month)) {
             let alertController = UIAlertController(title: "かぶった！", message: "追加しなくておｋ(´▽`) '`,、'`,、", preferredStyle: .Alert)
-            let defaultAction = UIAlertAction(title: "はーい", style: .Default, handler: nil)
-            alertController.addAction(defaultAction)
+            let action = UIAlertAction(title: "はーい", style: .Default, handler: nil)
+            alertController.addAction(action)
             presentViewController(alertController, animated: true, completion: nil)
         } else {
             dates.insert(currentDate, atIndex: 0)
