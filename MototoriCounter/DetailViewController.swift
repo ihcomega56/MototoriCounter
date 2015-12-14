@@ -8,11 +8,18 @@
 
 import UIKit
 
+
+var numbersOfTimes: Dictionary? = Dictionary<String, Int>()
+var times = 0
+
+
 class DetailViewController: UIViewController {
+    
+    var year = ""
+    var month = ""
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-    var times = 0
 
     var detailItem: AnyObject? {
         didSet {
@@ -25,9 +32,9 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                let year = calendar.component(.Year, fromDate: detail as! NSDate)
-                let month = calendar.component(.Month, fromDate: detail as! NSDate)
-                label.text = String(year) + "年" + String(month) + "月"
+                year = String(calendar.component(.Year, fromDate: detail as! NSDate))
+                month = String(calendar.component(.Month, fromDate: detail as! NSDate))
+                label.text = year + "年" + month + "月"
             }
         }
     }
@@ -40,15 +47,20 @@ class DetailViewController: UIViewController {
     @IBAction func minus(sender: UIButton) {
         times -= 1
         timesLabel.text = String(times)
+        numbersOfTimes![year+month] = times
     }
     @IBAction func plus(sender: UIButton) {
         times += 1
         timesLabel.text = String(times)
     }
     
+    func calcurate() {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        timesLabel.text = String(times)
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
