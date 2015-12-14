@@ -8,11 +8,17 @@
 
 import UIKit
 
+var monthlyFee = 0
+var eachTimeFee = 0
+
 class MasterViewController: UITableViewController {
 
+    let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+    
     var detailViewController: DetailViewController? = nil
     var dates = [AnyObject]()
-    let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+    
+    @IBOutlet weak var feeButon: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +47,8 @@ class MasterViewController: UITableViewController {
         let currentDate = NSDate()
         if (dates.count > 0 && calendar.isDate(currentDate, equalToDate: dates[0] as! NSDate, toUnitGranularity: .Month)) {
             let alertController = UIAlertController(title: "かぶった！", message: "追加しなくておｋ(´▽`) '`,、'`,、", preferredStyle: .Alert)
-            let defaultAction = UIAlertAction(title: "はーい", style: .Default, handler: nil)
-            alertController.addAction(defaultAction)
+            let action = UIAlertAction(title: "はーい", style: .Default, handler: nil)
+            alertController.addAction(action)
             presentViewController(alertController, animated: true, completion: nil)
         } else {
             dates.insert(currentDate, atIndex: 0)
@@ -81,13 +87,52 @@ class MasterViewController: UITableViewController {
         let date = NSDate()
         let year = calendar.component(.Year, fromDate: date)
         let month = calendar.component(.Month, fromDate: date)
-        cell.textLabel!.text = String(year) + "年" + String(month) + "月💖"
+        cell.textLabel!.text = String(year) + "年" + String(month) + "月( ᐛ👐)"
         return cell
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
+    }
+    
+    // MARK: - Tool Bar
+    
+    @IBAction func addMonthlyFee(sender: AnyObject) {
+        var monthlyFeeField: UITextField!
+        var eachTimeFeeField: UITextField!
+        
+        let alertController: UIAlertController = UIAlertController(title: "費用を更新=͟͟͞͞⊂(’ω’)=͟͟͞͞⊃", message: "月額と都度会費いれてね！", preferredStyle: .Alert)
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .Cancel) { action -> Void in
+        }
+        alertController.addAction(cancelAction)
+        
+        let logintAction: UIAlertAction = UIAlertAction(title: "登録", style: .Default) { action -> Void in
+            if (!monthlyFeeField.text!.isEmpty) {
+                monthlyFee = Int(monthlyFeeField.text!)!
+            }
+            if (!eachTimeFeeField.text!.isEmpty) {
+                eachTimeFee = Int(eachTimeFeeField.text!)!
+            }
+        }
+        alertController.addAction(logintAction)
+        
+        alertController.addTextFieldWithConfigurationHandler { textField -> Void in
+            textField.keyboardType = UIKeyboardType.NumberPad
+            monthlyFeeField = textField
+            textField.placeholder = "月額〜"
+            textField.text = String(monthlyFee)
+        }
+        alertController.addTextFieldWithConfigurationHandler { textField -> Void in
+            textField.keyboardType = UIKeyboardType.NumberPad
+            eachTimeFeeField = textField
+            textField.placeholder = "都度会費〜"
+            textField.text = String(eachTimeFee)
+        }
+        
+        presentViewController(alertController, animated: true, completion: nil)
+
     }
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
