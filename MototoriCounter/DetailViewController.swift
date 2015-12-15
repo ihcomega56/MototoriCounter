@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  MototoriCounter
 //
-//  Created by Ayana Yokota on 2015/12/08.
+//  Created by ihcomega on 2015/12/08.
 //  Copyright © 2015年 ihcomega. All rights reserved.
 //
 
@@ -49,10 +49,13 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func minus(sender: UIButton) {
-        times -= 1
-        updateTimes(times)
+        if (times > 0) {
+            times -= 1
+        }
+            updateTimes(times)
         resultLabel.text = calcurate(self.fees!)
     }
+    
     @IBAction func plus(sender: UIButton) {
         times += 1
         updateTimes(times)

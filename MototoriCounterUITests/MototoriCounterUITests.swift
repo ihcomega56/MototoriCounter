@@ -2,7 +2,7 @@
 //  MototoriCounterUITests.swift
 //  MototoriCounterUITests
 //
-//  Created by Ayana Yokota on 2015/12/08.
+//  Created by ihcomega on 2015/12/08.
 //  Copyright © 2015年 ihcomega. All rights reserved.
 //
 
