@@ -20,7 +20,7 @@ class DetailViewController: UIViewController {
     var year = ""
     var month = ""
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var detailPage: UINavigationItem!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var timesLabel: UILabel!
@@ -41,13 +41,10 @@ class DetailViewController: UIViewController {
     }
     
     func configureView() {
-        // Update the user interface for the detail item.
         if let date = self.dateForDetail {
-            if let label = self.detailDescriptionLabel {
                 year = String(calendar.component(.Year, fromDate: date))
                 month = String(calendar.component(.Month, fromDate: date))
-                label.text = year + "年" + month + "月"
-            }
+                detailPage.title = year + "年" + month + "月"
         }
     }
     
