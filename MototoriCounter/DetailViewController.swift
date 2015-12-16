@@ -12,7 +12,6 @@ import UIKit
 var numbersOfTimes: Dictionary? = Dictionary<String, Int>()
 var times = 0
 
-
 class DetailViewController: UIViewController {
     
     let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
@@ -27,6 +26,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var monthlyFeeLabel: UILabel!
     @IBOutlet weak var eachTimeFeeLabel: UILabel!
+    @IBOutlet weak var feeButton: UIBarButtonItem!
 
     var dateForDetail: NSDate? {
         didSet {
@@ -87,14 +87,14 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        timesLabel.text = String(times)
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-        resultLabel.text = calcurate(self.fees!)
         monthlyFeeLabel.text = "月額" + String(monthlyFee) + "えん"
         eachTimeFeeLabel.text = "都度" + String(eachTimeFee) + "えん"
+        timesLabel.text = String(times)
+        resultLabel.text = calcurate(fees!)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

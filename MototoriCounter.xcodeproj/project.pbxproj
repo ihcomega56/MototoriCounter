@@ -13,8 +13,9 @@
 		AE821FB21C16F29D0064E8DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE821FB01C16F29D0064E8DC /* Main.storyboard */; };
 		AE821FB41C16F29D0064E8DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE821FB31C16F29D0064E8DC /* Assets.xcassets */; };
 		AE821FB71C16F29D0064E8DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE821FB51C16F29D0064E8DC /* LaunchScreen.storyboard */; };
-		AE821FC21C16F29D0064E8DC /* MototoriCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FC11C16F29D0064E8DC /* MototoriCounterTests.swift */; };
 		AE821FCD1C16F29D0064E8DC /* MototoriCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FCC1C16F29D0064E8DC /* MototoriCounterUITests.swift */; };
+		AEFB7A941C25A0F500EADA51 /* MototoriCounter.app in Sources */ = {isa = PBXBuildFile; fileRef = AE821FA71C16F29D0064E8DC /* MototoriCounter.app */; };
+		AEFB7A961C25A18800EADA51 /* FeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB7A951C25A18800EADA51 /* FeeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AE821FC81C16F29D0064E8DC /* MototoriCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MototoriCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE821FCC1C16F29D0064E8DC /* MototoriCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MototoriCounterUITests.swift; sourceTree = "<group>"; };
 		AE821FCE1C16F29D0064E8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEFB7A951C25A18800EADA51 /* FeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AE821FB31C16F29D0064E8DC /* Assets.xcassets */,
 				AE821FB51C16F29D0064E8DC /* LaunchScreen.storyboard */,
 				AE821FB81C16F29D0064E8DC /* Info.plist */,
+				AEFB7A951C25A18800EADA51 /* FeeViewController.swift */,
 			);
 			path = MototoriCounter;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE821FAF1C16F29D0064E8DC /* DetailViewController.swift in Sources */,
+				AEFB7A961C25A18800EADA51 /* FeeViewController.swift in Sources */,
 				AE821FAD1C16F29D0064E8DC /* MasterViewController.swift in Sources */,
 				AE821FAB1C16F29D0064E8DC /* AppDelegate.swift in Sources */,
 			);
@@ -272,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE821FC21C16F29D0064E8DC /* MototoriCounterTests.swift in Sources */,
+				AEFB7A941C25A0F500EADA51 /* MototoriCounter.app in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +493,7 @@
 				AE821FD31C16F29D0064E8DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE821FD41C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				AE821FD61C16F29D0064E8DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE821FD71C16F29D0064E8DC /* Build configuration list for PBXNativeTarget "MototoriCounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				AE821FD91C16F29D0064E8DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
