@@ -25,6 +25,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var timesLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var monthlyFeeLabel: UILabel!
+    @IBOutlet weak var eachTimeFeeLabel: UILabel!
 
     var dateForDetail: NSDate? {
         didSet {
@@ -89,6 +91,8 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         resultLabel.text = calcurate(self.fees!)
+        monthlyFeeLabel.text = "月額" + String(monthlyFee) + "えん"
+        eachTimeFeeLabel.text = "都度" + String(eachTimeFee) + "えん"
     }
 
     override func didReceiveMemoryWarning() {
