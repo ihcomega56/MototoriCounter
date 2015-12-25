@@ -97,6 +97,17 @@
                                     <rect key="frame" x="20" y="416" width="280" height="21"/>
                                 </variation>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YuB-ik-59F">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="会費" width="289" id="UqW-TC-guV">
+                                        <connections>
+                                            <action selector="addMonthlyFee:" destination="JEX-9P-axG" id="69p-Pd-Bqv"/>
+                                            <segue destination="YHD-rm-xcp" kind="presentation" id="LEE-rY-hkU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -122,6 +133,7 @@
                     <connections>
                         <outlet property="detailPage" destination="mOI-FS-AaM" id="leD-YV-2vo"/>
                         <outlet property="eachTimeFeeLabel" destination="V1s-x1-cKK" id="CEs-og-8qA"/>
+                        <outlet property="feeButton" destination="UqW-TC-guV" id="eNF-CI-2M4"/>
                         <outlet property="minusButton" destination="0zO-wj-irF" id="Pvd-FX-Xhz"/>
                         <outlet property="monthlyFeeLabel" destination="zEH-pW-KKx" id="lQ4-tl-ykJ"/>
                         <outlet property="plusButton" destination="FXa-Qu-f2T" id="gkX-pu-Ill"/>
@@ -132,6 +144,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="129"/>
+        </scene>
+        <!--Fee View Controller-->
+        <scene sceneID="mBx-7F-WI7">
+            <objects>
+                <viewController id="YHD-rm-xcp" customClass="FeeViewController" customModule="MototoriCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MqJ-ka-WaA"/>
+                        <viewControllerLayoutGuide type="bottom" id="xY0-I2-tcI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SMF-VQ-SlA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="80v-xg-LbA">
+                                <rect key="frame" x="82" y="170" width="157" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="82" y="219" width="157" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOS-LU-pyj">
+                                <rect key="frame" x="82" y="327" width="157" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1o-aC-XP0">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="登録" width="289" id="3XT-er-bgn">
+                                        <connections>
+                                            <action selector="addFees:" destination="YHD-rm-xcp" id="XTa-WK-a6C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78g-8M-QVK">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="56" y="101" width="210" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaA-Kd-Yad">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="67" width="210" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="78g-8M-QVK"/>
+                                <exclude reference="PaA-Kd-Yad"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="78g-8M-QVK"/>
+                                <include reference="PaA-Kd-Yad"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="eachTimeFeeField" destination="EOS-LU-pyj" id="7pj-HP-GT8"/>
+                        <outlet property="messageLabel" destination="78g-8M-QVK" id="SOi-Gh-lak"/>
+                        <outlet property="monthlyFeeField" destination="80v-xg-LbA" id="AIu-jh-Mue"/>
+                        <outlet property="titleLabel" destination="PaA-Kd-Yad" id="jxQ-vu-iSi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAY-Gn-KBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="129"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -155,18 +247,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="bottom" id="9sL-f7-Ncu">
-                            <rect key="frame" x="0.0" y="130" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem style="plain" systemItem="flexibleSpace" id="Xkq-9I-V0N"/>
-                                <barButtonItem title="月額" width="42" id="QZX-8I-Nim">
-                                    <connections>
-                                        <action selector="addMonthlyFee:" destination="7bK-jq-Zjz" id="0aH-fA-Isv"/>
-                                    </connections>
-                                </barButtonItem>
-                            </items>
-                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -198,9 +278,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="一覧" id="Zdf-7t-Un8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="feeButon" destination="QZX-8I-Nim" id="xpf-Fm-dUf"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>

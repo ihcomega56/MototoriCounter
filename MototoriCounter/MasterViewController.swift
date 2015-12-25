@@ -8,17 +8,12 @@
 
 import UIKit
 
-var monthlyFee = 0
-var eachTimeFee = 0
-
 class MasterViewController: UITableViewController {
 
     let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
     
     var detailViewController: DetailViewController? = nil
     var dates = [AnyObject]()
-    
-    @IBOutlet weak var feeButon: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,45 +90,6 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-    
-    // MARK: - Tool Bar
-    
-    @IBAction func addMonthlyFee(sender: AnyObject) {
-        var monthlyFeeField: UITextField!
-        var eachTimeFeeField: UITextField!
-        
-        let alertController: UIAlertController = UIAlertController(title: "費用を更新=͟͟͞͞⊂(’ω’)=͟͟͞͞⊃", message: "月額と都度会費いれてね！", preferredStyle: .Alert)
-        
-        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .Cancel) { action -> Void in
-        }
-        alertController.addAction(cancelAction)
-        
-        let logintAction: UIAlertAction = UIAlertAction(title: "登録", style: .Default) { action -> Void in
-            if (!monthlyFeeField.text!.isEmpty) {
-                monthlyFee = Int(monthlyFeeField.text!)!
-            }
-            if (!eachTimeFeeField.text!.isEmpty) {
-                eachTimeFee = Int(eachTimeFeeField.text!)!
-            }
-        }
-        alertController.addAction(logintAction)
-        
-        alertController.addTextFieldWithConfigurationHandler { textField -> Void in
-            textField.keyboardType = UIKeyboardType.NumberPad
-            monthlyFeeField = textField
-            textField.placeholder = "月額〜"
-            textField.text = String(monthlyFee)
-        }
-        alertController.addTextFieldWithConfigurationHandler { textField -> Void in
-            textField.keyboardType = UIKeyboardType.NumberPad
-            eachTimeFeeField = textField
-            textField.placeholder = "都度会費〜"
-            textField.text = String(eachTimeFee)
-        }
-        
-        presentViewController(alertController, animated: true, completion: nil)
-
     }
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
