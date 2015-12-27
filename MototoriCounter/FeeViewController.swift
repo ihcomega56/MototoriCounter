@@ -33,12 +33,18 @@ class FeeViewController: UIViewController {
     
     @IBAction func addFees(sender: AnyObject) {
         if let month = monthlyFeeField.text {
-            monthlyFee = Int(month)!
+            monthlyFee = Int(convertToHalf(month))!
         }
         if let each = eachTimeFeeField.text {
-            eachTimeFee = Int(each)!
+            eachTimeFee = Int(convertToHalf(each))!
         }
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func convertToHalf(text: String) -> String {
+        let convertedText = NSMutableString(string: text) as CFMutableString
+        CFStringTransform(convertedText, nil, kCFStringTransformFullwidthHalfwidth, false)
+        return convertedText as String
     }
     
     override func didReceiveMemoryWarning() {
