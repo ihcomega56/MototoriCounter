@@ -32,11 +32,15 @@ class FeeViewController: UIViewController {
     }
     
     @IBAction func addFees(sender: AnyObject) {
-        if let month = monthlyFeeField.text {
-            monthlyFee = Int(convertToHalf(month))!
+        if let monthlyFeeText = monthlyFeeField.text {
+            if let month = Int(convertToHalf(monthlyFeeText)) {
+                monthlyFee = month
+            }
         }
-        if let each = eachTimeFeeField.text {
-            eachTimeFee = Int(convertToHalf(each))!
+        if let eachTimeFeeText = eachTimeFeeField.text {
+            if let each = Int(convertToHalf(eachTimeFeeText)) {
+                eachTimeFee = each
+            }
         }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
