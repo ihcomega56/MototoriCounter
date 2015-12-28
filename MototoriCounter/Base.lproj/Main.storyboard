@@ -100,7 +100,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YuB-ik-59F">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="会費" width="289" id="UqW-TC-guV">
+                                    <barButtonItem title="会費設定" width="289" id="UqW-TC-guV">
                                         <connections>
                                             <action selector="addMonthlyFee:" destination="JEX-9P-axG" id="69p-Pd-Bqv"/>
                                             <segue destination="YHD-rm-xcp" kind="presentation" id="LEE-rY-hkU"/>
