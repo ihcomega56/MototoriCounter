@@ -101,6 +101,5 @@ class MasterViewController: UITableViewController {
         }
     }
 
-
 }
 

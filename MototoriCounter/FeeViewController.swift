@@ -13,7 +13,6 @@ var eachTimeFee = 0
 
 class FeeViewController: UIViewController {
     
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var monthlyFeeField: UITextField!
@@ -55,7 +54,6 @@ class FeeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 }
 
