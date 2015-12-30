@@ -13,6 +13,8 @@ class MasterViewController: UITableViewController {
     let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
     
     var detailViewController: DetailViewController? = nil
+    var inputYear = 0
+    var inputMonth = 0
     var dates = [AnyObject]()
 
     override func viewDidLoad() {
@@ -40,6 +42,41 @@ class MasterViewController: UITableViewController {
 
     func insertNewObject(sender: AnyObject) {
         let currentDate = NSDate()
+        
+        var currentYearField: UITextField!
+        var currentMonthField: UITextField!
+        
+        let alertController: UIAlertController = UIAlertController(title: "追加する年月は(•̃͡ε•̃͡)∫?", message: "今月の分なら、そのままで！", preferredStyle: .Alert)
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .Cancel) { action -> Void in
+        }
+        alertController.addAction(cancelAction)
+        
+        let logintAction: UIAlertAction = UIAlertAction(title: "追加", style: .Default) { action -> Void in
+            if let currentYear = currentYearField.text {
+                self.inputYear = Int(currentYear)!
+            }
+            if let currentMonth = currentMonthField.text {
+                self.inputMonth = Int(currentMonth)!
+            }
+        }
+        alertController.addAction(logintAction)
+        
+        alertController.addTextFieldWithConfigurationHandler { textField -> Void in
+            textField.keyboardType = UIKeyboardType.NumberPad
+            currentYearField = textField
+            textField.placeholder = "年"
+            textField.text = String(self.inputYear)
+        }
+        alertController.addTextFieldWithConfigurationHandler { textField -> Void in
+            textField.keyboardType = UIKeyboardType.NumberPad
+            currentMonthField = textField
+            textField.placeholder = "月"
+            textField.text = String(self.inputMonth)
+        }
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
         if (dates.count > 0 && calendar.isDate(currentDate, equalToDate: dates[0] as! NSDate, toUnitGranularity: .Month)) {
             let alertController = UIAlertController(title: "かぶった！", message: "追加しなくておｋ(´▽`) '`,、'`,、", preferredStyle: .Alert)
             let action = UIAlertAction(title: "はーい", style: .Default, handler: nil)
