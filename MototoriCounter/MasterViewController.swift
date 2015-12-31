@@ -13,7 +13,9 @@ class MasterViewController: UITableViewController {
     let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
     
     var detailViewController: DetailViewController? = nil
-    var dates = [AnyObject]()
+    var inputYear = 0
+    var inputMonth = 0
+    var dates = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +42,49 @@ class MasterViewController: UITableViewController {
 
     func insertNewObject(sender: AnyObject) {
         let currentDate = NSDate()
-        if (dates.count > 0 && calendar.isDate(currentDate, equalToDate: dates[0] as! NSDate, toUnitGranularity: .Month)) {
-            let alertController = UIAlertController(title: "かぶった！", message: "追加しなくておｋ(´▽`) '`,、'`,、", preferredStyle: .Alert)
+        
+        var currentYearField: UITextField!
+        var currentMonthField: UITextField!
+        
+        let inputAlert: UIAlertController = UIAlertController(title: "追加する年月は(•̃͡ε•̃͡)∫?", message: "今月の分なら、そのままで！", preferredStyle: .Alert)
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .Cancel) { action -> Void in
+        }
+        inputAlert.addAction(cancelAction)
+        
+        let logintAction: UIAlertAction = UIAlertAction(title: "追加", style: .Default) { action -> Void in
+            if let currentYear = currentYearField.text, currentMonth = currentMonthField.text {
+                self.inputYear = Int(currentYear)!
+                self.inputMonth = Int(currentMonth)!
+                self.insert(String(self.inputYear) + String(self.inputMonth))
+            }
+        }
+        inputAlert.addAction(logintAction)
+        
+        inputAlert.addTextFieldWithConfigurationHandler { textField -> Void in
+            textField.keyboardType = UIKeyboardType.NumberPad
+            currentYearField = textField
+            textField.placeholder = "年"
+            textField.text = String(self.calendar.component(.Year, fromDate: currentDate))
+        }
+        inputAlert.addTextFieldWithConfigurationHandler { textField -> Void in
+            textField.keyboardType = UIKeyboardType.NumberPad
+            currentMonthField = textField
+            textField.placeholder = "月"
+            textField.text = String(self.calendar.component(.Month, fromDate: currentDate))
+        }
+        
+        presentViewController(inputAlert, animated: true, completion: nil)
+    }
+    
+    func insert(inputDate: String) {
+        if (dates.count > 0 && dates.contains(inputDate)) {
+            let duplicateAlert = UIAlertController(title: "かぶった！", message: "追加しなくておｋ(´▽`) '`,、'`,、", preferredStyle: .Alert)
             let action = UIAlertAction(title: "はーい", style: .Default, handler: nil)
-            alertController.addAction(action)
-            presentViewController(alertController, animated: true, completion: nil)
+            duplicateAlert.addAction(action)
+            presentViewController(duplicateAlert, animated: true, completion: nil)
         } else {
-            dates.insert(currentDate, atIndex: 0)
+            dates.insert(inputDate, atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
@@ -80,10 +118,7 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        let date = NSDate()
-        let year = calendar.component(.Year, fromDate: date)
-        let month = calendar.component(.Month, fromDate: date)
-        cell.textLabel!.text = String(year) + "年" + String(month) + "月( ᐛ👐)"
+        cell.textLabel!.text = String(self.inputYear) + "年" + String(self.inputMonth) + "月( ᐛ👐)"
         return cell
     }
 
