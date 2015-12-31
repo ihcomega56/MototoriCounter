@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var eachTimeFeeLabel: UILabel!
     @IBOutlet weak var feeButton: UIBarButtonItem!
 
-    var dateForDetail: NSDate? {
+    var dateForDetail: String? {
         didSet {
             // Update the view.
             self.configureView()
@@ -44,9 +44,7 @@ class DetailViewController: UIViewController {
     
     func configureView() {
         if let date = self.dateForDetail {
-                year = String(calendar.component(.Year, fromDate: date))
-                month = String(calendar.component(.Month, fromDate: date))
-                detailPage.title = year + "年" + month + "月"
+            detailPage.title = date
         }
     }
     
