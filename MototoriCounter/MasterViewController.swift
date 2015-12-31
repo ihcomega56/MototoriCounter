@@ -56,7 +56,7 @@ class MasterViewController: UITableViewController {
             if let currentYear = currentYearField.text, currentMonth = currentMonthField.text {
                 self.inputYear = Int(currentYear)!
                 self.inputMonth = Int(currentMonth)!
-                self.insert(String(self.inputYear) + String(self.inputMonth))
+                self.insert(String(self.inputYear), month: String(self.inputMonth))
             }
         }
         inputAlert.addAction(logintAction)
@@ -77,7 +77,8 @@ class MasterViewController: UITableViewController {
         presentViewController(inputAlert, animated: true, completion: nil)
     }
     
-    func insert(inputDate: String) {
+    func insert(year: String, month: String) {
+        let inputDate = year + "年" + month + "月"
         if (dates.count > 0 && dates.contains(inputDate)) {
             let duplicateAlert = UIAlertController(title: "かぶった！", message: "追加しなくておｋ(´▽`) '`,、'`,、", preferredStyle: .Alert)
             let action = UIAlertAction(title: "はーい", style: .Default, handler: nil)
@@ -95,7 +96,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let date = dates[indexPath.row] as! NSDate
+                let date = dates[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.dateForDetail = date
                 controller.fees = (monthlyFee, eachTimeFee)
@@ -118,7 +119,7 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        cell.textLabel!.text = String(self.inputYear) + "年" + String(self.inputMonth) + "月( ᐛ👐)"
+        cell.textLabel!.text = dates[indexPath.row] + "( ᐛ👐)"
         return cell
     }
 
