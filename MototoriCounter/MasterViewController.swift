@@ -13,8 +13,6 @@ class MasterViewController: UITableViewController {
     let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
     
     var detailViewController: DetailViewController? = nil
-    var inputYear = 0
-    var inputMonth = 0
     var dates = [String]()
 
     override func viewDidLoad() {
@@ -54,9 +52,7 @@ class MasterViewController: UITableViewController {
         
         let logintAction: UIAlertAction = UIAlertAction(title: "追加", style: .Default) { action -> Void in
             if let currentYear = currentYearField.text, currentMonth = currentMonthField.text {
-                self.inputYear = Int(currentYear)!
-                self.inputMonth = Int(currentMonth)!
-                self.insert(String(self.inputYear), month: String(self.inputMonth))
+                self.insert(String(currentYear), month: String(currentMonth))
             }
         }
         inputAlert.addAction(logintAction)
@@ -84,6 +80,11 @@ class MasterViewController: UITableViewController {
             let action = UIAlertAction(title: "はーい", style: .Default, handler: nil)
             duplicateAlert.addAction(action)
             presentViewController(duplicateAlert, animated: true, completion: nil)
+        } else if (Int(year) == nil || Int(month) == nil) {
+            let validationAlert = UIAlertController(title: "数字ちゃう！", message: "年月いれてくれよ(´▽`) '`,、'`,、", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "はーい", style: .Default, handler: nil)
+            validationAlert.addAction(action)
+            presentViewController(validationAlert, animated: true, completion: nil)
         } else {
             dates.insert(inputDate, atIndex: 0)
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
