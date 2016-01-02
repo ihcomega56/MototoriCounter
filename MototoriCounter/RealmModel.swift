@@ -9,11 +9,13 @@
 import Foundation
 import RealmSwift
 
-class RealmModel: Object {
+class RealmSwift: Object {
+    dynamic var date = ""
+    dynamic var times = 0
+    dynamic var monthlyFee = 0
+    dynamic var eachTimeFee = 0
     
-// Specify properties to ignore (Realm won't persist these)
-    
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    override static func primaryKey() -> String? {
+        return "date"
+    }
 }
