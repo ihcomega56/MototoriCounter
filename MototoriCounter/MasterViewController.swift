@@ -17,7 +17,6 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
@@ -26,6 +25,15 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        // runs before application closing
+        // TODO これちゃんと呼ばれるか実機で確認しよう(╭☞•́⍛•̀)╭☞
+        let terminationNotifier = NSNotificationCenter.defaultCenter()
+        terminationNotifier.addObserver(
+            self,
+            selector: "writeAllData:",
+            name:UIApplicationWillTerminateNotification,
+            object: nil)
     }
 
     override func viewWillAppear(animated: Bool) {
