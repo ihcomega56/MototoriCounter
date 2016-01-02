@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE2F82CB1C38112500ECEC18 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F82CA1C38112500ECEC18 /* RealmModel.swift */; };
+		AE2F82CE1C3811CA00ECEC18 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2F82CC1C3811CA00ECEC18 /* Realm.framework */; };
+		AE2F82CF1C3811CA00ECEC18 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE2F82CC1C3811CA00ECEC18 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE2F82D01C3811CA00ECEC18 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2F82CD1C3811CA00ECEC18 /* RealmSwift.framework */; };
+		AE2F82D11C3811CA00ECEC18 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE2F82CD1C3811CA00ECEC18 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE821FAB1C16F29D0064E8DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAA1C16F29D0064E8DC /* AppDelegate.swift */; };
 		AE821FAD1C16F29D0064E8DC /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAC1C16F29D0064E8DC /* MasterViewController.swift */; };
 		AE821FAF1C16F29D0064E8DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAE1C16F29D0064E8DC /* DetailViewController.swift */; };
@@ -35,7 +40,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AE2F82C91C36A9B800ECEC18 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE2F82D11C3811CA00ECEC18 /* RealmSwift.framework in Embed Frameworks */,
+				AE2F82CF1C3811CA00ECEC18 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AE2F82B81C36A93D00ECEC18 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-0.97.0/osx/swift-2.1.1/Realm.framework"; sourceTree = "<group>"; };
+		AE2F82B91C36A93D00ECEC18 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-0.97.0/osx/swift-2.1.1/RealmSwift.framework"; sourceTree = "<group>"; };
+		AE2F82CA1C38112500ECEC18 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		AE2F82CC1C3811CA00ECEC18 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		AE2F82CD1C3811CA00ECEC18 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		AE821FA71C16F29D0064E8DC /* MototoriCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MototoriCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE821FAA1C16F29D0064E8DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE821FAC1C16F29D0064E8DC /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE2F82D01C3811CA00ECEC18 /* RealmSwift.framework in Frameworks */,
+				AE2F82CE1C3811CA00ECEC18 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +108,10 @@
 		AE821F9E1C16F29D0064E8DC = {
 			isa = PBXGroup;
 			children = (
+				AE2F82CC1C3811CA00ECEC18 /* Realm.framework */,
+				AE2F82CD1C3811CA00ECEC18 /* RealmSwift.framework */,
+				AE2F82B81C36A93D00ECEC18 /* Realm.framework */,
+				AE2F82B91C36A93D00ECEC18 /* RealmSwift.framework */,
 				AE821FA91C16F29D0064E8DC /* MototoriCounter */,
 				AE821FC01C16F29D0064E8DC /* MototoriCounterTests */,
 				AE821FCB1C16F29D0064E8DC /* MototoriCounterUITests */,
@@ -109,6 +140,7 @@
 				AE821FB51C16F29D0064E8DC /* LaunchScreen.storyboard */,
 				AE821FB81C16F29D0064E8DC /* Info.plist */,
 				AEFB7A951C25A18800EADA51 /* FeeViewController.swift */,
+				AE2F82CA1C38112500ECEC18 /* RealmModel.swift */,
 			);
 			path = MototoriCounter;
 			sourceTree = "<group>";
@@ -141,6 +173,7 @@
 				AE821FA31C16F29D0064E8DC /* Sources */,
 				AE821FA41C16F29D0064E8DC /* Frameworks */,
 				AE821FA51C16F29D0064E8DC /* Resources */,
+				AE2F82C91C36A9B800ECEC18 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +301,7 @@
 				AE821FAF1C16F29D0064E8DC /* DetailViewController.swift in Sources */,
 				AEFB7A961C25A18800EADA51 /* FeeViewController.swift in Sources */,
 				AE821FAD1C16F29D0064E8DC /* MasterViewController.swift in Sources */,
+				AE2F82CB1C38112500ECEC18 /* RealmModel.swift in Sources */,
 				AE821FAB1C16F29D0064E8DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +442,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MototoriCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounter;
@@ -419,6 +457,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MototoriCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounter;
@@ -430,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = /Users/ihcomega/Xcode/MototoriCounter;
 				INFOPLIST_FILE = MototoriCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounterTests;
@@ -442,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = /Users/ihcomega/Xcode/MototoriCounter;
 				INFOPLIST_FILE = MototoriCounterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihcomega.MototoriCounterTests;
