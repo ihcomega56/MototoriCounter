@@ -20,5 +20,7 @@ class RealmSwift: Object {
     }
 }
 
+func readAllData() {
+}
 func writeAllData() {
 }

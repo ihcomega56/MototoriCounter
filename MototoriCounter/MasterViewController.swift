@@ -26,6 +26,14 @@ class MasterViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
+        // runs after application launched
+        let launchNotifier = NSNotificationCenter.defaultCenter()
+        launchNotifier.addObserver(
+            self,
+            selector: "readAllData:",
+            name:UIApplicationWillTerminateNotification,
+            object: nil)
+        
         // runs before application closing
         // TODO これちゃんと呼ばれるか実機で確認しよう(╭☞•́⍛•̀)╭☞
         let terminationNotifier = NSNotificationCenter.defaultCenter()
