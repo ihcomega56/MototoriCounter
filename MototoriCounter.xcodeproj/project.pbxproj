@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C74D1D41C3E4CC800621BEB /* Duke.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C74D1D31C3E4CC800621BEB /* Duke.png */; };
 		AE821FAB1C16F29D0064E8DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAA1C16F29D0064E8DC /* AppDelegate.swift */; };
 		AE821FAD1C16F29D0064E8DC /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAC1C16F29D0064E8DC /* MasterViewController.swift */; };
 		AE821FAF1C16F29D0064E8DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE821FAE1C16F29D0064E8DC /* DetailViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C74D1D31C3E4CC800621BEB /* Duke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Duke.png; sourceTree = "<group>"; };
 		AE821FA71C16F29D0064E8DC /* MototoriCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MototoriCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE821FAA1C16F29D0064E8DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE821FAC1C16F29D0064E8DC /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -78,9 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C74D1CE1C3BE45400621BEB /* image */ = {
+			isa = PBXGroup;
+			children = (
+				2C74D1D31C3E4CC800621BEB /* Duke.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 		AE821F9E1C16F29D0064E8DC = {
 			isa = PBXGroup;
 			children = (
+				2C74D1CE1C3BE45400621BEB /* image */,
 				AE821FA91C16F29D0064E8DC /* MototoriCounter */,
 				AE821FC01C16F29D0064E8DC /* MototoriCounterTests */,
 				AE821FCB1C16F29D0064E8DC /* MototoriCounterUITests */,
@@ -238,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C74D1D41C3E4CC800621BEB /* Duke.png in Resources */,
 				AE821FB71C16F29D0064E8DC /* LaunchScreen.storyboard in Resources */,
 				AE821FB41C16F29D0064E8DC /* Assets.xcassets in Resources */,
 				AE821FB21C16F29D0064E8DC /* Main.storyboard in Resources */,
