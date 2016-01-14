@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MasterViewController: UITableViewController {
 
     let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+    let realm = try! Realm()
     
     var detailViewController: DetailViewController? = nil
     var dates = [String]()
@@ -103,6 +105,11 @@ class MasterViewController: UITableViewController {
             presentViewController(validationAlert, animated: true, completion: nil)
         } else {
             dates.insert(inputDate, atIndex: 0)
+            let record =  RealmSwift()
+            record.date = inputDate
+            try! realm.write {
+                realm.add(record, update: true)
+            }
             let indexPath = NSIndexPath(forRow: 0, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
